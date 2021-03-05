@@ -1,7 +1,7 @@
 package com.blog.Pessoal.model;
 
-import java.util.Date;
 
+import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -27,6 +27,7 @@ public class Postagem {
     @ManyToOne
     @JsonIgnoreProperties("postagem")
 	private Tema tema;
+
 
 	public long getId() {
 		return id;

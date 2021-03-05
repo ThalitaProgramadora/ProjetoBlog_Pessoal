@@ -16,14 +16,23 @@ public class SwaggerConfig {
 	public Docket docket() {
 		return new Docket(DocumentationType.SWAGGER_2).select()
 				.apis(RequestHandlerSelectors.basePackage("org.generation.Pessoal.controller"))
-				.paths(PathSelectors.any()).build().apiInfo(apiInfo());
+				.paths(PathSelectors.any())
+				.build()
+				.apiInfo(apiInfo());
 	}
 	
 	public ApiInfo apiInfo() {
-		return new ApiInfoBuilder().title("Blog Pessoal Thalita").description("API do Projeto de blog pessoal").version("1.0").contact(contact()).build();
+		return new ApiInfoBuilder()
+		.title("Blog Pessoal Thalita")
+		.description("API do Projeto de blog pessoal")
+		.version("1.0")
+		.contact(contact())
+		.build();
 	}
 	
 	private Contact contact() {
-		return new Contact("Thalita Oliveira silva", "https://github.com/ThalitaProgramadora", "Desenvolvedor(a) Java Full Stack");
+		return new Contact("Thalita Oliveira silva", 
+	    "https://github.com/ThalitaProgramadora", 
+	    "Desenvolvedor(a) Java Full Stack");
 	}
 }
